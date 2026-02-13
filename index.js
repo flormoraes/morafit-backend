@@ -10,11 +10,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+
 app.use(
   cors({
     origin: [
       "https://www.morafit.uy",
       "https://morafit.uy",
+      "http://localhost:3000",
     ],
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
